@@ -1,4 +1,4 @@
-# Najmi Hafizh Mauludan Zain_2409116028
+# Najmi Hafizh Mauludan Zain_2409116028_SI A`24
 
 ## Aplikasi Daftar Belanja 
 
@@ -6,8 +6,6 @@
 Aplikasi Daftar Belanja merupakan aplikasi mobile sederhana yang dibuat menggunakan framework Flutter. Aplikasi ini digunakan untuk membantu pengguna mencatat barang-barang yang ingin dibeli, seperti makanan, minuman, peralatan rumah tangga, maupun kebutuhan lainnya.
 
 Pada aplikasi ini pengguna dapat menambahkan daftar barang yang ingin dibeli, melihat daftar barang yang sudah dimasukkan, memperbarui data barang jika ada perubahan, serta menghapus barang yang sudah tidak diperlukan lagi. Seluruh data yang dimasukkan tidak disimpan secara lokal, tetapi langsung tersimpan pada database Supabase sehingga data dapat dikelola dengan lebih terstruktur.
-
-Pembuatan aplikasi ini bertujuan untuk mempraktikkan penggunaan Flutter dalam membuat aplikasi mobile, sekaligus memahami bagaimana cara menghubungkan aplikasi dengan database menggunakan layanan backend seperti Supabase.
 
 ---
 
@@ -18,7 +16,6 @@ Aplikasi ini memiliki beberapa fitur utama yang mendukung pengelolaan daftar bel
 - Menambahkan data barang baru ke dalam daftar belanja.
 - Mengedit atau memperbarui informasi barang yang sudah ada.
 - Menghapus data barang yang tidak diperlukan lagi.
-- Mengelompokkan barang berdasarkan kategori seperti makanan, minuman, peralatan, dan kebutuhan lainnya.
 - Menggunakan navigasi antar halaman untuk berpindah dari halaman daftar ke halaman form.
 - Mendukung tampilan Light Mode dan Dark Mode sehingga pengguna dapat menggunakan aplikasi dengan tampilan yang lebih nyaman.
 
@@ -29,12 +26,14 @@ Aplikasi ini memiliki beberapa fitur utama yang mendukung pengelolaan daftar bel
 #### Halaman Daftar Belanja
 Halaman ini merupakan halaman utama yang menampilkan seluruh daftar barang belanja yang tersimpan pada database. Pada halaman ini pengguna dapat melihat nama barang, jumlah barang, serta kategori barang. Selain itu terdapat tombol untuk menambahkan barang baru dan juga tombol untuk mengedit atau menghapus data yang sudah ada.
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/HomePageDark.png)
+![Home Page](screenshots/HomePageLight.png)
 
 #### Halaman Form Tambah / Edit Barang
-Halaman ini digunakan untuk memasukkan data barang baru ataupun memperbarui data barang yang sudah ada. Pengguna dapat mengisi nama barang, jumlah barang, serta memilih kategori barang melalui dropdown yang tersedia.
+Halaman ini digunakan untuk memasukkan data barang baru ataupun memperbarui data barang yang sudah ada. Pengguna dapat mengisi nama barang, jumlah barang, serta memilih kategori barang melalui pilihan yang tersedia.
 
-![Form Page](screenshots/form.png)
+![Form Page](screenshots/FormPageDark.png)
+![Form Page](screenshots/FormPageLight.png)
 
 ---
 
@@ -62,3 +61,41 @@ Selain widget bawaan Flutter, aplikasi ini juga menggunakan beberapa **custom wi
 
 ## Struktur Project
 Struktur folder pada project ini dibuat untuk memisahkan bagian-bagian penting dalam aplikasi agar kode lebih mudah dipahami dan dikelola.
+
+lib:
+models:
+- shopping_item.dart
+
+pages:
+- home_page.dart
+- form_page.dart
+
+services:
+- supabase_service.dart
+
+themes:
+- app_theme.dart
+
+widgets:
+- custom_button.dart
+- custom_textfield.dart
+  
+main.dart
+
+-**models** berisi struktur data yang digunakan dalam aplikasi.
+-**pages** berisi halaman-halaman utama aplikasi.
+-**services** berisi kode yang digunakan untuk berkomunikasi dengan database Supabase.
+-**themes** berisi pengaturan tampilan aplikasi seperti warna dan mode terang/gelap.
+-**widgets** berisi widget tambahan yang dibuat sendiri untuk mempermudah penggunaan komponen UI.
+
+---
+
+## Teknologi yang Digunakan
+Beberapa teknologi yang digunakan dalam pembuatan aplikasi ini antara lain:
+
+- **Flutter** sebagai framework untuk membangun aplikasi mobile.
+- **Dart** sebagai bahasa pemrograman yang digunakan pada Flutter.
+- **Supabase** sebagai database backend untuk menyimpan data aplikasi.
+- **Material Design** untuk membuat tampilan antarmuka aplikasi.
+
+---
